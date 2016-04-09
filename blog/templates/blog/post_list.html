@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>My first blog</title>
+    </head>
+    <body>
+        <h1>First article</h1>
+        <h2>And my first sub-heading</h2>
+        <h3>And even more...</h3>
+        <p><strong>It works!</strong></p>
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
+    </body>
+</html>
